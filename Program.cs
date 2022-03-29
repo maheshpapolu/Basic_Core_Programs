@@ -4,31 +4,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Harmonic_number
+namespace An_Alphabet_is_Vowel_or_Consonant
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int i, n;
-            double s = 0.0;
-
+            char ch;
             Console.Write("\n\n");
-            Console.Write("Calculate the harmonic series and their sum:\n");
-            Console.Write("----------------------------------------------");
+            Console.Write("check whether the input alphabet is a vowel or not:\n");
+            Console.Write("-----------------------------------------------------");
             Console.Write("\n\n");
 
-            Console.Write("Input the number of terms : ");
-            n = Convert.ToInt32(Console.ReadLine());
-            Console.Write("\n\n");
-            for (i = 1; i <= n; i++)
+            Console.Write("Input an Alphabet (A-Z or a-z) : ");
+            ch = Convert.ToChar(Console.ReadLine().ToLower());
+            int i = ch;
+            if (i >= 48 && i <= 57)
             {
-                Console.Write("1/{0} + ", i);
-                s += 1 / (float)i;
+                Console.Write("You entered a number, Please enter an alpahbet.");
             }
-            Console.Write("\nSum of Series upto {0} terms : {1} \n", n, s);
+            else
+            {
+                switch (ch)
+                {
+                    case 'a':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'i':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'o':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'u':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    case 'e':
+                        Console.WriteLine("The Alphabet is vowel");
+                        break;
+                    default:
+                        Console.WriteLine("The Alphabet is not a vowel");
+                        break;
+                }
+            }
+            Console.ReadKey();
         }
     }
 }
-    
-
